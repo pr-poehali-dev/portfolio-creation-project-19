@@ -386,7 +386,7 @@ const Index = () => {
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white/10 transition-transform duration-200 hover:scale-105"
-                    onClick={() => window.open('https://t.me/danilazinin', '_blank')}
+                    onClick={() => window.open('https://t.me/dvzinin', '_blank')}
                   >
                     <Icon name="Send" className="mr-2" size={20} />
                     Telegram
