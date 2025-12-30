@@ -14,40 +14,58 @@ const Index = () => {
 
   const cases = [
     {
-      title: 'Яндекс Календарь',
-      type: 'B2B / B2C Product',
-      problem: 'Низкая удовлетворённость пользователей (SUPER-Q: 3.5) и длинные сценарии создания событий',
-      solution: 'Discovery через CustDev → приоритизация болей → редизайн UX создания событий и улучшение онбординга',
-      results: [
-        { metric: 'SUPER-Q', value: '3.5 → 4.0', icon: 'TrendingUp' },
-        { metric: 'Retention', value: '+10%', icon: 'Users' },
-        { metric: 'Time-to-action', value: '120 → 35 сек', icon: 'Zap' }
+      company: 'Ингосстрах × Авито',
+      role: 'Product Manager',
+      stage: 'Fintech MVP · 0 → 1',
+      problem: 'Отсутствие доверия к онлайн-сделкам между частными лицами',
+      solutions: [
+        'Провёл CustDev с 40+ пользователями для выявления барьеров доверия',
+        'Разработал концепцию MVP «Безопасная сделка» с эскроу-механикой',
+        'Приоритизировал функции по модели RICE, сократил scope на 40%'
       ],
-      tools: ['CustDev', 'JTBD', 'Prototype', 'A/B тесты', 'SQL']
+      myRole: 'Discovery, формирование метрик успеха, UX-сценарии, координация с партнёром (Ингосстрах)',
+      results: [
+        { metric: 'Транзакции', value: '+12%', icon: 'TrendingUp', description: 'рост безопасных сделок' },
+        { metric: 'Споры', value: '−15%', icon: 'Shield', description: 'снижение конфликтов' },
+        { metric: 'PMF', value: 'Подтверждён', icon: 'CheckCircle2', description: 'через user interviews' }
+      ],
+      tools: ['CustDev', 'RICE', 'Figma', 'SQL']
     },
     {
-      title: 'OSKELLY',
-      type: 'FashionTech iOS',
-      problem: 'Низкая конверсия в покупку и высокий процент отменённых заказов',
-      solution: 'Внедрение BNPL, one-click payments, автоматизация процессов через глубокий анализ CJM',
-      results: [
-        { metric: 'Revenue', value: '+10%', icon: 'DollarSign' },
-        { metric: 'Conversion Rate', value: '+5%', icon: 'Target' },
-        { metric: 'AOV', value: '70k → 120k ₽', icon: 'ShoppingCart' }
+      company: 'Яндекс Календарь',
+      role: 'Product Manager',
+      stage: 'B2B/B2C · Growth',
+      problem: 'Низкая удовлетворённость (SUPER-Q: 3.5) и сложные сценарии создания событий',
+      solutions: [
+        'Проанализировал 500+ сессий пользователей, выявил 3 критические боли',
+        'Редизайн UX создания событий: сократил шаги с 5 до 2',
+        'A/B-тест новых сценариев на 15% аудитории перед полным запуском'
       ],
-      tools: ['CJM', 'Amplitude', 'Power BI', 'Mixpanel']
+      myRole: 'UX-исследование, приоритизация фич, работа с дизайном и разработкой, метрики качества',
+      results: [
+        { metric: 'SUPER-Q', value: '3.5 → 4.0', icon: 'Star', description: '+14% удовлетворённость' },
+        { metric: 'Retention D7', value: '+10%', icon: 'Users', description: 'возвраты пользователей' },
+        { metric: 'Time-to-action', value: '120 → 35 сек', icon: 'Zap', description: 'создание события' }
+      ],
+      tools: ['CustDev', 'JTBD', 'A/B тесты', 'SQL', 'Amplitude']
     },
     {
-      title: 'Ингосстрах × Авито',
-      type: 'Fintech MVP',
-      problem: 'Отсутствие доверия к онлайн-сделкам без встречи',
-      solution: 'Разработка MVP «Безопасная сделка» через Customer Development и тестирование гипотез',
-      results: [
-        { metric: 'Транзакции', value: '+12%', icon: 'Activity' },
-        { metric: 'Споры', value: '−15%', icon: 'Shield' },
-        { metric: 'PMF', value: 'Подтверждён', icon: 'CheckCircle' }
+      company: 'OSKELLY',
+      role: 'Product Manager',
+      stage: 'FashionTech iOS · Monetization',
+      problem: 'Низкая конверсия в покупку (CR < 2%) и 18% отменённых заказов',
+      solutions: [
+        'Построил CJM, нашёл 2 точки оттока: оплата и доставка',
+        'Внедрил BNPL и one-click payments, упростил чекаут на 60%',
+        'Автоматизировал подтверждение заказов через интеграцию с курьерами'
       ],
-      tools: ['CustDev', 'Figma', 'User Interviews', 'Risk Analysis']
+      myRole: 'CJM-анализ, гипотезы по монетизации, приоритизация интеграций, метрики Revenue',
+      results: [
+        { metric: 'Revenue', value: '+10%', icon: 'DollarSign', description: 'рост выручки' },
+        { metric: 'CR', value: '+5 п.п.', icon: 'Target', description: 'конверсия в покупку' },
+        { metric: 'AOV', value: '70k → 120k ₽', icon: 'TrendingUp', description: 'средний чек' }
+      ],
+      tools: ['CJM', 'Power BI', 'Mixpanel', 'Figma']
     }
   ];
 
@@ -219,82 +237,167 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto space-y-8">
+          <div className="max-w-6xl mx-auto space-y-10">
             {cases.map((caseItem, index) => (
               <Card 
                 key={index}
-                className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all duration-300 hover:scale-105 animate-fade-in"
+                className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all duration-300 animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardHeader>
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-2">
+                <CardHeader className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 border-b border-violet-500/20">
+                  <div className="space-y-3">
                     <div>
-                      <CardTitle className="text-2xl lg:text-3xl text-white mb-2">
-                        {caseItem.title}
+                      <CardTitle className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                        {caseItem.company}
                       </CardTitle>
-                      <Badge className="bg-fuchsia-600/20 text-fuchsia-300 border-fuchsia-500/50">
-                        {caseItem.type}
-                      </Badge>
+                      <div className="flex flex-wrap gap-2 items-center">
+                        <Badge className="bg-violet-600/20 text-violet-300 border-violet-500/50">
+                          {caseItem.role}
+                        </Badge>
+                        <Badge className="bg-fuchsia-600/20 text-fuchsia-300 border-fuchsia-500/50">
+                          {caseItem.stage}
+                        </Badge>
+                      </div>
                     </div>
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
-                  <div className="grid lg:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-sm font-semibold text-violet-400 mb-2 uppercase tracking-wide">
-                          Проблема
-                        </h4>
-                        <p className="text-slate-300">{caseItem.problem}</p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-sm font-semibold text-fuchsia-400 mb-2 uppercase tracking-wide">
-                          Решение
-                        </h4>
-                        <p className="text-slate-300">{caseItem.solution}</p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wide">
-                          Инструменты
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {caseItem.tools.map((tool, i) => (
-                            <Badge key={i} variant="outline" className="border-slate-600 text-slate-300">
-                              {tool}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-sm font-semibold text-green-400 mb-4 uppercase tracking-wide">
-                        Результаты
-                      </h4>
-                      <div className="space-y-3">
-                        {caseItem.results.map((result, i) => (
-                          <div 
-                            key={i}
-                            className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-green-500/50 transition-all"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <Icon name={result.icon as any} className="text-green-400" size={24} />
-                                <span className="text-slate-400">{result.metric}</span>
-                              </div>
-                              <span className="text-xl font-bold text-green-400">{result.value}</span>
-                            </div>
+                <CardContent className="p-6 lg:p-8 space-y-6">
+                  <div>
+                    <h4 className="text-sm font-bold text-red-400 mb-2 uppercase tracking-wide flex items-center gap-2">
+                      <Icon name="AlertCircle" size={16} />
+                      Проблема
+                    </h4>
+                    <p className="text-slate-200 text-lg">{caseItem.problem}</p>
+                  </div>
+                  
+                  <Separator className="bg-violet-500/20" />
+                  
+                  <div>
+                    <h4 className="text-sm font-bold text-cyan-400 mb-3 uppercase tracking-wide flex items-center gap-2">
+                      <Icon name="Lightbulb" size={16} />
+                      Решение
+                    </h4>
+                    <ul className="space-y-2">
+                      {caseItem.solutions.map((solution, i) => (
+                        <li key={i} className="flex items-start gap-3 text-slate-300">
+                          <Icon name="ArrowRight" className="text-cyan-400 mt-1 flex-shrink-0" size={18} />
+                          <span>{solution}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-violet-900/20 p-4 rounded-lg border border-violet-500/30">
+                    <h4 className="text-sm font-bold text-violet-300 mb-2 uppercase tracking-wide flex items-center gap-2">
+                      <Icon name="User" size={16} />
+                      Мой вклад как PM
+                    </h4>
+                    <p className="text-slate-300 leading-relaxed">{caseItem.myRole}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-sm font-bold text-green-400 mb-4 uppercase tracking-wide flex items-center gap-2">
+                      <Icon name="BarChart3" size={16} />
+                      Impact
+                    </h4>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {caseItem.results.map((result, i) => (
+                        <div 
+                          key={i}
+                          className="bg-gradient-to-br from-slate-800/50 to-green-900/10 p-5 rounded-lg border border-green-500/30 hover:border-green-500/60 transition-all hover:scale-105"
+                        >
+                          <div className="flex items-center gap-2 mb-2">
+                            <Icon name={result.icon as any} className="text-green-400" size={20} />
+                            <span className="text-slate-400 text-sm font-semibold">{result.metric}</span>
                           </div>
-                        ))}
-                      </div>
+                          <div className="text-2xl font-bold text-green-400 mb-1">{result.value}</div>
+                          <p className="text-slate-500 text-xs">{result.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="pt-2">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-slate-500 text-sm">Инструменты:</span>
+                      {caseItem.tools.map((tool, i) => (
+                        <Badge key={i} variant="outline" className="border-slate-600 text-slate-400 text-xs">
+                          {tool}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Visual Section */}
+      <section className="py-20 relative bg-slate-950/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              Продукты, над которыми я работал
+            </h2>
+            <p className="text-xl text-slate-400">
+              Реальные решения с измеримым результатом
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center border-b border-violet-500/20">
+                <div className="text-center p-6">
+                  <Icon name="Shield" className="mx-auto mb-3 text-violet-400" size={48} />
+                  <p className="text-white font-semibold text-lg">Безопасная сделка</p>
+                  <p className="text-slate-400 text-sm">Ингосстрах × Авито</p>
+                </div>
+              </div>
+              <CardContent className="p-4">
+                <h4 className="text-white font-semibold mb-2">Fintech MVP</h4>
+                <p className="text-slate-400 text-sm mb-3">Эскроу-механика для защиты онлайн-сделок между частными лицами</p>
+                <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
+                  +12% транзакций
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-red-900/30 to-orange-900/30 flex items-center justify-center border-b border-violet-500/20">
+                <div className="text-center p-6">
+                  <Icon name="Calendar" className="mx-auto mb-3 text-violet-400" size={48} />
+                  <p className="text-white font-semibold text-lg">Яндекс Календарь</p>
+                  <p className="text-slate-400 text-sm">B2B/B2C Product</p>
+                </div>
+              </div>
+              <CardContent className="p-4">
+                <h4 className="text-white font-semibold mb-2">UX Redesign</h4>
+                <p className="text-slate-400 text-sm mb-3">Упрощение создания событий: с 5 шагов до 2, сокращение времени на 70%</p>
+                <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
+                  SUPER-Q 3.5 → 4.0
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-pink-900/30 to-purple-900/30 flex items-center justify-center border-b border-violet-500/20">
+                <div className="text-center p-6">
+                  <Icon name="ShoppingBag" className="mx-auto mb-3 text-violet-400" size={48} />
+                  <p className="text-white font-semibold text-lg">OSKELLY</p>
+                  <p className="text-slate-400 text-sm">FashionTech iOS</p>
+                </div>
+              </div>
+              <CardContent className="p-4">
+                <h4 className="text-white font-semibold mb-2">Monetization Growth</h4>
+                <p className="text-slate-400 text-sm mb-3">BNPL, one-click payments — упрощение чекаута для роста конверсии</p>
+                <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
+                  AOV 70k → 120k ₽
+                </Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
