@@ -142,50 +142,64 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm animate-fade-in">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Icon name="User" className="text-violet-400" size={28} />
-                  <CardTitle className="text-3xl text-white">Подход к Product Management</CardTitle>
+                <div className="text-center mb-2">
+                  <CardTitle className="text-3xl lg:text-4xl font-bold text-white mb-3">
+                    Как я создаю продукты, которые растут
+                  </CardTitle>
                 </div>
-                <CardDescription className="text-slate-300 text-lg">
-                  Data-driven подход с фокусом на глубокое понимание пользователя
+                <CardDescription className="text-slate-300 text-lg text-center max-w-2xl mx-auto">
+                  От CustDev до роста метрик: пользователь → данные → impact
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8">
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-slate-800/50 p-6 rounded-lg border border-violet-500/20 hover:border-violet-500/50 transition-all duration-200 hover:scale-105">
-                    <Icon name="Search" className="text-violet-400 mb-3" size={32} />
-                    <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
-                    <p className="text-slate-400">Глубокий CustDev для выявления реальных болей пользователей</p>
+                  <div className="bg-gradient-to-br from-slate-800/50 to-violet-900/20 p-6 rounded-lg border border-violet-500/30 hover:border-violet-500/70 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-violet-500/20">
+                    <Icon name="Search" className="text-violet-400 mb-4" size={36} />
+                    <h3 className="text-xl font-bold text-white mb-3">Нахожу точки роста</h3>
+                    <p className="text-slate-300 leading-relaxed">CustDev, CJM и анализ данных для поиска реальных болей и возможностей продукта</p>
                   </div>
                   
-                  <div className="bg-slate-800/50 p-6 rounded-lg border border-fuchsia-500/20 hover:border-fuchsia-500/50 transition-all duration-200 hover:scale-105">
-                    <Icon name="Target" className="text-fuchsia-400 mb-3" size={32} />
-                    <h3 className="text-xl font-semibold text-white mb-2">Гипотезы</h3>
-                    <p className="text-slate-400">Быстрые итерации и A/B-тесты для валидации решений</p>
+                  <div className="bg-gradient-to-br from-slate-800/50 to-fuchsia-900/20 p-6 rounded-lg border border-fuchsia-500/30 hover:border-fuchsia-500/70 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-500/20">
+                    <Icon name="Zap" className="text-fuchsia-400 mb-4" size={36} />
+                    <h3 className="text-xl font-bold text-white mb-3">Проверяю быстро</h3>
+                    <p className="text-slate-300 leading-relaxed">MVP и A/B-тесты для валидации гипотез без лишних затрат ресурсов</p>
                   </div>
                   
-                  <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-200 hover:scale-105">
-                    <Icon name="TrendingUp" className="text-cyan-400 mb-3" size={32} />
-                    <h3 className="text-xl font-semibold text-white mb-2">Impact</h3>
-                    <p className="text-slate-400">Измеримые результаты через метрики и аналитику</p>
+                  <div className="bg-gradient-to-br from-slate-800/50 to-cyan-900/20 p-6 rounded-lg border border-cyan-500/30 hover:border-cyan-500/70 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
+                    <Icon name="TrendingUp" className="text-cyan-400 mb-4" size={36} />
+                    <h3 className="text-xl font-bold text-white mb-3">Добиваюсь роста</h3>
+                    <p className="text-slate-300 leading-relaxed">CR, Retention, Revenue, Time-to-Value — измеримый бизнес-результат</p>
                   </div>
                 </div>
                 
                 <Separator className="bg-violet-500/30" />
                 
-                <div className="space-y-3 text-slate-300">
-                  <div className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-violet-400 mt-1 flex-shrink-0" size={20} />
-                    <p>Опыт &gt;2 лет в Product Management в BigTech и финтехе</p>
+                <div className="bg-slate-800/30 p-6 rounded-lg border border-violet-500/20">
+                  <div className="grid md:grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-violet-400 mb-1">2+ года</div>
+                      <p className="text-slate-400 text-sm">BigTech, fintech, e-commerce</p>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-fuchsia-400 mb-1">0→1</div>
+                      <p className="text-slate-400 text-sm">Запуск продуктов с нуля</p>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">Cross-func</div>
+                      <p className="text-slate-400 text-sm">Dev × Design × Analytics</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-violet-400 mt-1 flex-shrink-0" size={20} />
-                    <p>Запуск продуктов с нуля и улучшение существующих метрик</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-violet-400 mt-1 flex-shrink-0" size={20} />
-                    <p>Работа с кросс-функциональными командами: разработка, дизайн, аналитика</p>
-                  </div>
+                </div>
+                
+                <div className="text-center pt-4">
+                  <Button 
+                    size="lg"
+                    className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-lg shadow-violet-500/50 transition-all duration-200 hover:scale-105"
+                    onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <Icon name="BarChart3" className="mr-2" size={20} />
+                    Посмотреть кейсы с цифрами
+                  </Button>
                 </div>
               </CardContent>
             </Card>
