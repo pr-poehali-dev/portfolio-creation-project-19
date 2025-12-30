@@ -376,10 +376,10 @@ const Index = () => {
                   <Button 
                     size="lg"
                     className="bg-white text-violet-900 hover:bg-slate-100 shadow-lg transition-transform duration-200 hover:scale-105"
-                    onClick={() => window.location.href = 'mailto:danila.zinin@example.com'}
+                    onClick={() => window.location.href = 'mailto:danila.zinin@list.ru'}
                   >
                     <Icon name="Mail" className="mr-2" size={20} />
-                    danila.zinin@example.com
+                    danila.zinin@list.ru
                   </Button>
                   
                   <Button 
