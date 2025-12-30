@@ -104,7 +104,7 @@ const Index = () => {
               Данила Зинин
             </h1>
             
-            <p className="text-xl lg:text-2xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-2xl lg:text-3xl font-semibold mb-8 leading-relaxed bg-gradient-to-r from-violet-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
               От идеи до метрик: продукты, которыми пользуются миллионы
             </p>
             
