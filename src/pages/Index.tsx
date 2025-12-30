@@ -105,9 +105,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Превращаю пользовательские боли в измеримые результаты через{' '}
-              <span className="text-violet-400 font-semibold">Discovery</span> и{' '}
-              <span className="text-fuchsia-400 font-semibold">CustDev</span>
+              От идеи до метрик: продукты, которыми пользуются миллионы
             </p>
             
             <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
