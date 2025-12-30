@@ -14,24 +14,6 @@ const Index = () => {
 
   const cases = [
     {
-      company: 'Ингосстрах × Авито',
-      role: 'Product Manager',
-      stage: 'Fintech MVP · 0 → 1',
-      problem: 'Отсутствие доверия к онлайн-сделкам между частными лицами',
-      solutions: [
-        'Провёл CustDev с 40+ пользователями для выявления барьеров доверия',
-        'Разработал концепцию MVP «Безопасная сделка» с эскроу-механикой',
-        'Приоритизировал функции по модели RICE, сократил scope на 40%'
-      ],
-      myRole: 'Discovery, формирование метрик успеха, UX-сценарии, координация с партнёром (Ингосстрах)',
-      results: [
-        { metric: 'Транзакции', value: '+12%', icon: 'TrendingUp', description: 'рост безопасных сделок' },
-        { metric: 'Споры', value: '−15%', icon: 'Shield', description: 'снижение конфликтов' },
-        { metric: 'PMF', value: 'Подтверждён', icon: 'CheckCircle2', description: 'через user interviews' }
-      ],
-      tools: ['CustDev', 'RICE', 'Figma', 'SQL']
-    },
-    {
       company: 'Яндекс Календарь',
       role: 'Product Manager',
       stage: 'B2B/B2C · Growth',
@@ -66,6 +48,24 @@ const Index = () => {
         { metric: 'AOV', value: '70k → 120k ₽', icon: 'TrendingUp', description: 'средний чек' }
       ],
       tools: ['CJM', 'Power BI', 'Mixpanel', 'Figma']
+    },
+    {
+      company: 'Ингосстрах × Авито',
+      role: 'Product Manager',
+      stage: 'Fintech MVP · 0 → 1',
+      problem: 'Отсутствие доверия к онлайн-сделкам между частными лицами',
+      solutions: [
+        'Провёл CustDev с 40+ пользователями для выявления барьеров доверия',
+        'Разработал концепцию MVP «Безопасная сделка» с эскроу-механикой',
+        'Приоритизировал функции по модели RICE, сократил scope на 40%'
+      ],
+      myRole: 'Discovery, формирование метрик успеха, UX-сценарии, координация с партнёром (Ингосстрах)',
+      results: [
+        { metric: 'Транзакции', value: '+12%', icon: 'TrendingUp', description: 'рост безопасных сделок' },
+        { metric: 'Споры', value: '−15%', icon: 'Shield', description: 'снижение конфликтов' },
+        { metric: 'PMF', value: 'Подтверждён', icon: 'CheckCircle2', description: 'через user interviews' }
+      ],
+      tools: ['CustDev', 'RICE', 'Figma', 'SQL']
     }
   ];
 
@@ -349,23 +349,6 @@ const Index = () => {
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center border-b border-violet-500/20">
-                <div className="text-center p-6">
-                  <Icon name="Shield" className="mx-auto mb-3 text-violet-400" size={48} />
-                  <p className="text-white font-semibold text-lg">Безопасная сделка</p>
-                  <p className="text-slate-400 text-sm">Ингосстрах × Авито</p>
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="text-white font-semibold mb-2">Fintech MVP</h4>
-                <p className="text-slate-400 text-sm mb-3">Эскроу-механика для защиты онлайн-сделок между частными лицами</p>
-                <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
-                  +12% транзакций
-                </Badge>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-red-900/30 to-orange-900/30 flex items-center justify-center border-b border-violet-500/20">
                 <div className="text-center p-6">
                   <Icon name="Calendar" className="mx-auto mb-3 text-violet-400" size={48} />
@@ -395,6 +378,23 @@ const Index = () => {
                 <p className="text-slate-400 text-sm mb-3">BNPL, one-click payments — упрощение чекаута для роста конверсии</p>
                 <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
                   AOV 70k → 120k ₽
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-900/50 border-violet-500/30 backdrop-blur-sm hover:border-violet-500/60 transition-all hover:scale-105 overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center border-b border-violet-500/20">
+                <div className="text-center p-6">
+                  <Icon name="Shield" className="mx-auto mb-3 text-violet-400" size={48} />
+                  <p className="text-white font-semibold text-lg">Безопасная сделка</p>
+                  <p className="text-slate-400 text-sm">Ингосстрах × Авито</p>
+                </div>
+              </div>
+              <CardContent className="p-4">
+                <h4 className="text-white font-semibold mb-2">Fintech MVP</h4>
+                <p className="text-slate-400 text-sm mb-3">Эскроу-механика для защиты онлайн-сделок между частными лицами</p>
+                <Badge className="bg-green-600/20 text-green-300 border-green-500/50 text-xs">
+                  +12% транзакций
                 </Badge>
               </CardContent>
             </Card>
