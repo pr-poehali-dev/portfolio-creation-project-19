@@ -83,6 +83,17 @@ const Index = () => {
         
         <div className={`relative container mx-auto px-4 py-20 lg:py-32 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full blur-2xl opacity-30 animate-pulse" />
+                <img 
+                  src="https://cdn.poehali.dev/files/telegram-peer-photo-size-4-3863002670058022861-1-0-0.jpg"
+                  alt="Данила Зинин"
+                  className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover border-4 border-violet-500/50 shadow-2xl shadow-violet-500/50"
+                />
+              </div>
+            </div>
+            
             <div className="inline-block mb-4">
               <Badge className="bg-violet-600/20 text-violet-300 border-violet-500/50 px-4 py-1 text-sm">
                 Product Manager
