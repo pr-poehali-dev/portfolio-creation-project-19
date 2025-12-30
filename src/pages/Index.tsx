@@ -395,8 +395,7 @@ const Index = () => {
                   
                   <Button 
                     size="lg"
-                    variant="outline"
-                    className="border-white/50 text-white hover:bg-white/10 hover:border-white transition-transform duration-200 hover:scale-105"
+                    className="bg-white text-violet-900 hover:bg-slate-100 shadow-lg transition-transform duration-200 hover:scale-105"
                     onClick={() => window.location.href = 'mailto:danila.zinin@list.ru'}
                   >
                     <Icon name="Mail" className="mr-2" size={20} />
