@@ -29,7 +29,8 @@ const Index = () => {
         { metric: 'Retention D7', value: '+10%', icon: 'Users', description: 'возвраты пользователей' },
         { metric: 'Time-to-action', value: '120 → 35 сек', icon: 'Zap', description: 'создание события' }
       ],
-      tools: ['CustDev', 'JTBD', 'A/B тесты', 'SQL', 'Amplitude']
+      tools: ['CustDev', 'JTBD', 'A/B тесты', 'SQL', 'Amplitude'],
+      image: 'https://cdn.poehali.dev/files/telegram-cloud-document-2-5460749418749789918.jpg'
     },
     {
       company: 'OSKELLY',
@@ -39,7 +40,7 @@ const Index = () => {
       solutions: [
         'Построил CJM, нашёл 2 точки оттока: оплата и доставка',
         'Внедрил BNPL и one-click payments, упростил чекаут на 60%',
-        'Автоматизировал подтверждение заказов через интеграцию с курьерами'
+        'Внедрил новый хэлпдеск сервис в компании'
       ],
       myRole: 'CJM-анализ, гипотезы по монетизации, приоритизация интеграций, метрики Revenue',
       results: [
@@ -47,7 +48,8 @@ const Index = () => {
         { metric: 'CR', value: '+5 п.п.', icon: 'Target', description: 'конверсия в покупку' },
         { metric: 'AOV', value: '70k → 120k ₽', icon: 'TrendingUp', description: 'средний чек' }
       ],
-      tools: ['CJM', 'Power BI', 'Mixpanel', 'Figma']
+      tools: ['CJM', 'Power BI', 'Mixpanel', 'Figma'],
+      image: 'https://cdn.poehali.dev/files/telegram-cloud-photo-size-2-5310283512097667045-y.jpg'
     },
     {
       company: 'Ингосстрах × Авито',
@@ -263,6 +265,16 @@ const Index = () => {
                 </CardHeader>
                 
                 <CardContent className="p-6 lg:p-8 space-y-6">
+                  {caseItem.image && (
+                    <div className="rounded-lg overflow-hidden border border-violet-500/30">
+                      <img 
+                        src={caseItem.image} 
+                        alt={caseItem.company}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  )}
+                  
                   <div>
                     <h4 className="text-sm font-bold text-red-400 mb-2 uppercase tracking-wide flex items-center gap-2">
                       <Icon name="AlertCircle" size={16} />
